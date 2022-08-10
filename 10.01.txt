@@ -1,0 +1,53 @@
+program 1:
+#include<stdio.h>
+int main()
+{
+	int result = 0,multiply = 1,n,x,y;
+	printf("Enter n value");;
+	scanf("%d",&n);
+	printf("Enter x and y values:\n");
+	scanf("%d %d",&x,&y);
+	int rem;
+	while(n>0)
+	{
+		int rem= n%10;
+		if(rem==x)
+		    result= result + y*multiply;
+		else
+		    result= result + rem*multiply;
+		multiply *= 10;
+		n=n/10;
+	}
+	if(n==x)
+	  result= result + y*multiply;
+	else
+	  result= result + n*multiply;
+	  
+	  printf("%d\n",result);
+	  
+	  return 0;
+}
+output 1:
+Enter n value12345
+Enter x and y values:
+1
+2
+22345
+
+--------------------------------
+Process exited after 6.62 seconds with return value 0
+Press any key to continue . . .
+
+output 2:
+Enter n value26278
+Enter x and y values:
+2
+5
+56578
+
+--------------------------------
+Process exited after 36.94 seconds with return value 0
+Press any key to continue . . .
+
+
+
