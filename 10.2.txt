@@ -1,0 +1,35 @@
+progarm 2:
+#include<stdio.h>
+int main()
+{
+	int num;
+	int temp;
+	scanf("%d",&num);
+	int sum=0;
+	temp = num;
+	while(temp)
+	{
+		sum += temp % 10;
+		    temp = temp/10; 
+	}
+	int result = num % sum;
+	if(result == 0)
+	     printf("Harshad Number");
+	else
+	     printf("Not Harshad Number");
+	return 0;
+}
+output 1:
+45
+Harshad Number
+--------------------------------
+Process exited after 2.567 seconds with return value 0
+Press any key to continue . . .
+
+output 2:
+23
+Not Harshad Number
+--------------------------------
+Process exited after 3.029 seconds with return value 0
+Press any key to continue . . .
+
